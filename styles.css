@@ -1,13 +1,11 @@
 * {
-    margin: 0%;
-    padding: 0%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     font-family: "Roboto", sans-serif;
-}
-
-body {
     background-color: rgb(1, 1, 14);
     color: white;
 }
@@ -20,7 +18,23 @@ nav {
     box-shadow: 0px 2px 6px 2px rgb(36, 35, 35);
     padding: 20px;
     background-color: rgb(1, 1, 14);
-    cursor: pointer;
+    z-index: 1000;
+}
+
+nav .logo {
+    margin-left: 33px;
+    font-size: 23px;
+    color: rgb(255, 0, 0);
+}
+
+ul {
+    display: flex;
+    align-items: center;
+    margin-right: 62px;
+}
+
+ul li {
+    list-style: none;
 }
 
 ul li a {
@@ -29,71 +43,52 @@ ul li a {
     color: white;
 }
 
-ul {
-    margin-right: 62px;
-    margin-top: 6px;
-}
-
 ul li button {
     width: 100px;
     height: 34px;
     background-color: rgb(255, 0, 0);
-    border: 2px solid white;
     border: none;
     color: white;
     font-size: 18px;
     border-radius: 2px;
 }
 
-ul button:hover {
+ul li button:hover,
+ul li a:hover {
     background-color: transparent;
-    cursor: pointer;
     border: 2px solid white;
     color: rgb(32, 250, 32);
 }
 
-ul li a:hover {
-    color: rgb(255, 0, 0);
-    border-bottom: 2px solid rgb(255, 0, 0);
-}
-
-nav .logo {
-    margin-left: 33px;
-    margin-top: 3px;
-    font-size: 23px;
-    color: rgb(255, 0, 0);
-}
-
-ul li {
-    list-style: none;
-}
-
-
 .main {
     display: flex;
     justify-content: center;
-    margin-left: 190px;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 100px;
+    padding: 20px;
 }
 
 .main img {
-    width: 59%;
-    margin-top: 113px;
+    width: 100%;
+    max-width: 500px;
+    margin: 20px;
 }
 
 .mainText {
-    margin-top: 200px;
-    position: relative;
-    margin-left: 90px;
+    max-width: 500px;
+    margin: 20px;
+    text-align: center;
 }
 
 .mainText h1 {
-    font-size: 60px;
+    font-size: 2.5rem;
     color: rgb(255, 0, 0);
 }
 
 .mainText h3 {
     margin-top: 21px;
-    font-size: 15px;
+    font-size: 1rem;
 }
 
 .mainText p {
@@ -108,7 +103,6 @@ ul li {
     border: none;
     background-color: rgb(255, 0, 0);
     color: white;
-    outline: none;
     font-size: 20px;
     cursor: pointer;
 }
@@ -120,205 +114,210 @@ ul li {
     color: rgb(255, 0, 0);
 }
 
-
-/* program */
-.head{
-    text-align: center;
-    margin-top: 22px;
-    padding: 90px;
-}
-.head span{
-    color: rgb(255, 0, 0);
-}
-.ourProgram{
-    display: flex;
-    justify-content: center;
+.program,
+.plans,
+.blog,
+.contact {
+    padding: 20px;
     text-align: center;
 }
-.ourProgram .crd{
-    margin-inline: 22px;
-}
-.crd img:hover{
-    transition: 1.4s ease;
-     width: 103%;
-     border: 1px solid wheat;
+
+.head {
+    margin: 20px 0;
 }
 
-/* plans */
+.head span {
+    color: rgb(255, 0, 0);
+}
 
-.ourPlans{
+.ourProgram,
+.ourPlans,
+.ourBlog {
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
-.ourPlans .card{
-    width: 300px;
-    height: 450px;
-    text-align: center;
-    color: white;
-    background-color: rgb(25, 25, 26);
-    margin-inline: 22px;
-}
-.ourPlans .card i{
-    margin-top: 33px;
-    color: rgb(252, 165, 5);
-    font-size: 32px;
-}
-.ourPlans .card:hover{
-    background-color: black;
-    transition: 0.7s ease;
-    width: 310px;
-    height: 480px;
-    font-size: 18px;
-    cursor: pointer;
-}
-.card h3{
-    margin-top: 22px;
-    color: rgb(255, 0, 0);
 
-}
-.card h1{
-    margin-top: 22px;
-    color: rgb(255, 0, 0);
-}
-.card p{
-    margin-top: 18px;
-    color: silver;
-}
-.card button{
-    margin-top: 22px;
-    width: 150px;
-    height: 40px;
-    background-color: #fa6604;
-    color: white;
-    border: none;
-    font-size: 22px;
-}
-.card button:hover{
-    border: 2px solid white;
-    color: rgb(255, 0, 0);
-    background-color: transparent;
-    cursor: pointer;
+.crd,
+.card,
+.blogCard {
+    margin: 20px;
 }
 
-
-/* blog */
-.ourBlog{
-    display: flex;
-    justify-content: center;
-
-}
-.ourBlog img{
+.card,
+.blogCard {
     width: 100%;
-}
-.blogCard{
-    width: 300px;
-    height: 380px;
-    margin-inline: 22px;
-    background-color: rgb(44, 43, 43);
+    max-width: 300px;
+    padding: 20px;
+    background-color: rgb(25, 25, 26);
     border-radius: 4px;
-}
-.blogCard p{
-    color: silver;
-    margin-top: 11px;
-}
-.blogCard a{
-    text-decoration: none;
-    width: 100px;
-    padding:8px;
-    background-color: rgb(255, 0, 0);
-    color: white;
-    border:none;
-    margin-top: 11px;
-    font-size: 17px;
-    border-radius: 2px;
-    position: absolute;
-}
-.blogCard .blogText{
-    padding: 15px;
+    transition: all 0.7s ease;
 }
 
-/* contact */
-
-
-.start{
-    display: flex;
-    justify-content: center;
-    margin-top: 200px;
-}
-.start img{
-    width: 64%;
-    margin-top: -55px;
-    margin-left: -192px;
-}
-.startText{
-    margin-top: 44px;
-    font-size: 33px;
-    margin-left: 112px;
-    
-}
-.startText h1{
-    color: rgb(231, 85, 85);
-}
-.startText h2{
-    color: rgb(255, 157, 0);
-}
-
-.connect{
-    text-align: center;
-    padding: 33px;
-}
-.connect .data{
-    border: 2px solid rgb(255, 0, 0);
-    width: 400px;
-    height: 240px;
-    padding: 12px;
-    margin-left: 32%;
-    margin-top: 22px;
-
-}
-.data input{
-    width: 300px;
-    height: 22px;
-    padding: 11px;
-    font-size: 20px;
-   margin-top: 22px;
-   border: none;
-   outline: none;
-   border-radius: 2px;
-}
-.data button{
-    width: 320px;
-    height: 45px;
-    border: none;
-    background-color: rgb(255, 0, 0);
-    color: white;
-    font-size: 25px;
-    border-radius: 2px;
-    margin-top: 22px;
+.card:hover,
+.blogCard:hover {
+    background-color: black;
     cursor: pointer;
 }
-.data button:hover{
+
+.card h3,
+.card h1,
+.card p,
+.card button {
+    margin-top: 20px;
+}
+
+.card button:hover {
     border: 2px solid white;
     color: rgb(255, 0, 0);
     background-color: transparent;
-   
 }
 
-/* Footer */
+.blogCard img {
+    width: 100%;
+    border-radius: 4px 4px 0 0;
+}
 
-.footer{
+.blogText {
+    padding: 20px;
+}
+
+.blogCard a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: rgb(255, 0, 0);
+    color: white;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.start {
     display: flex;
-    justify-content: center;
-    margin-top: 33px;
-    padding: 11px;
-    box-shadow: 0px 2px 8px 2px rgb(73, 72, 72);
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 50px;
+}
 
+.startText h1,
+.startText h2 {
+    margin: 20px 0;
 }
-.footer .footerText{
-    margin-inline: 70px;
-    margin-top: 43px;
-    margin-bottom: 33px;
+
+.connect {
+    padding: 20px;
 }
-.footerText p{
-    top: 22px;
+
+.data {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid rgb(255, 0, 0);
+}
+
+.data input,
+.data button {
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 2px;
+}
+
+.data button {
+    background-color: rgb(255, 0, 0);
+    color: white;
+    font-size: 20px;
+}
+
+.data button:hover {
+    border: 2px solid white;
+    color: rgb(255, 0, 0);
+    background-color: transparent;
+}
+
+.footer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    box-shadow: 0px 2px 8px 2px rgb(73, 72, 72);
+}
+
+.footerText {
+    margin: 20px;
+    max-width: 200px;
+}
+
+.footerText h2 {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        margin-right: 0;
+    }
+
+    .main,
+    .program,
+    .plans,
+    .blog,
+    .contact {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .main img,
+    .mainText {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .start {
+        margin-top: 20px;
+    }
+
+    .data input,
+    .data button {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav .logo {
+        margin: 0;
+    }
+
+    nav ul {
+        margin: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .mainText h1 {
+        font-size: 1.5rem;
+    }
+
+    .mainText h3,
+    .mainText p,
+    .mainText button {
+        font-size: 1rem;
+    }
+
+    .head {
+        font-size: 1.2rem;
+    }
+
+    .footerText {
+        max-width: 100%;
+        margin: 10px 0;
+    }
 }
